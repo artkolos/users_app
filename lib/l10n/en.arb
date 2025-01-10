@@ -1,0 +1,19 @@
+{
+  "@@locale": "en",
+  "address": "Address",
+  "city": "City",
+  "street": "Street",
+  "zipcode": "Zipcode",
+  "suite": "Suite",
+  "company": "Company",
+  "name": "Name",
+  "catchPhrase": "Catch phrase",
+  "bs": "Bs",
+  "networkError": "Network error!",
+  "tryAgain": "Try again",
+  "aboutUser": "About user",
+  "phone": "Phone",
+  "website": "Website",
+  "username": "Username",
+  "userNotFound": "User not found!"
+}
