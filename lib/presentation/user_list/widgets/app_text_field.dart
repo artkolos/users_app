@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:users_app/extensions/color_scheme_ext.dart';
+import 'package:users_app/extensions/locale_ext.dart';
 
 class AppTextField extends StatelessWidget {
   const AppTextField({
     super.key,
     required this.controller,
+    required this.focusNode,
   });
 
   final TextEditingController controller;
+  final FocusNode focusNode;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      focusNode: focusNode,
       controller: controller,
       style: TextStyle(
         fontSize: 16,
@@ -21,7 +25,7 @@ class AppTextField extends StatelessWidget {
       cursorColor: context.colorScheme.onPrimary.withOpacity(0.4),
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
-        hintText: 'Search',
+        hintText: context.locale.search,
         hintStyle: TextStyle(
           fontWeight: FontWeight.w400,
           fontSize: 16,

@@ -30,7 +30,9 @@ class RestSource {
 
   Future<List<User>> getUsers() async {
     final response = await _dio.get(_users);
-    final data = (response.data as List<dynamic>).map((e) => e as Map<String, dynamic>).toList();
+    final data = (response.data as List<dynamic>)
+        .map((e) => e as Map<String, dynamic>)
+        .toList();
     final listUsers = data.map((e) => User.fromJson(e)).toList();
     return listUsers;
   }

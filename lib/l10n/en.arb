@@ -15,5 +15,6 @@
   "phone": "Phone",
   "website": "Website",
   "username": "Username",
-  "userNotFound": "User not found!"
+  "userNotFound": "User not found!",
+  "search": "Search"
 }

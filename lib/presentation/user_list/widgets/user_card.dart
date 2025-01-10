@@ -1,24 +1,22 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:users_app/domain/models/user/user.dart';
-import 'package:users_app/presentation/router/app_router.gr.dart';
 
 class UserCard extends StatelessWidget {
   const UserCard({
     super.key,
     required this.user,
+    required this.onTap,
   });
 
   final User user;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     return InkWell(
-      onTap: () => context.pushRoute(
-        UserDetailInfoRoute(user: user),
-      ),
+      onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
           color: colorScheme.primary, //Colors.grey.withOpacity(0.2),
